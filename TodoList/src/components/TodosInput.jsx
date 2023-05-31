@@ -39,7 +39,7 @@ function TodoInput(callback) {
       </div>
 
       <div className="formGroup">
-        <button onClick={onSubmitBtn}>Add</button>
+        <button onClick={onSubmitBtn} disabled={todo.body.trim().length === 0 ? true : false}>Add</button>
       </div>
     </div>
   );
