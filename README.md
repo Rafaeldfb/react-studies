@@ -42,5 +42,5 @@ But not only layout's metter, some cool events will happen just on mouse events 
 to get a better experence try to running this at your desktop or notebook too.
 
 
-# For Help, Suggestions and  to send Money or Cripto...
+# For Help, Suggestions and  to send for me some Money or Cripto...
 Please, contact me at - dfbrafa@hotmail.com
