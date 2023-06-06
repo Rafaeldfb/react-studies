@@ -73,10 +73,6 @@
   }
 }
 
-// #todosList {
-//   // some style
-// }
-
 div.todoListItem {
   display: flex;
   flex-wrap: wrap;
@@ -152,4 +148,24 @@ button:focus-visible {
 .textLineThrough {
   text-decoration: line-through red;
   color: var(--color__primary_light);
+}
+
+
+// Form slide in and out animation
+.slideEffect.slideInLeft {
+  transform: translate(0);
+  max-height: 275px;
+  opacity: 1;
+}
+.slideEffect.slideOutLeft {
+  transform: translate(-200%);
+  max-height: 0;
+  opacity: 0;
+}
+
+.slideEffect {
+  transition-property: transform, max-height, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+  overflow-y: hidden;
 }

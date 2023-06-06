@@ -1,6 +1,10 @@
 import { useState } from "react";
+import { useTodosContext, useTodosContextUpdate } from "./TodosProvider";
+import { useFormActiveContext } from "./FormContextProvider"
 
 function TodoInput(callback) {
+  const activeForm = useFormActiveContext();
+
   const [todo, setTodo] = useState({body: '', priority: 'normal'});
 
   function onSubmitBtn() {
@@ -11,7 +15,7 @@ function TodoInput(callback) {
   }
   
   return (
-    <div id="todosFomrWrapper">
+    <div id="todosFomrWrapper" className={`${activeForm ? 'slideInLeft' : 'slideOutLeft'} slideEffect`}>
       <div className="formGroup">
         <label htmlFor="#bodyTodo">What you need to do?</label>
 
@@ -45,4 +49,4 @@ function TodoInput(callback) {
   );
 }
 
-export default TodoInput
+export default TodoInput;
