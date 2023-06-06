@@ -1,17 +1,21 @@
 import { useState } from "react";
-import { useTodosContext, useTodosContextUpdate } from "./TodosProvider";
+import { useTodosContextUpdate } from "./TodosProvider";
 import { useFormActiveContext } from "./FormContextProvider"
 
-function TodoInput(callback) {
+function TodoInput() {
   const activeForm = useFormActiveContext();
 
   const [todo, setTodo] = useState({body: '', priority: 'normal'});
 
+  const updateTodos = useTodosContextUpdate()
+
   function onSubmitBtn() {
     if (todo.body.length === 0) return null;
 
-    callback.setTodoStateHandler(todo);
+    updateTodos.add(todo)
     setTodo({body: '', priority: 'normal'});
+    
+    return null;
   }
   
   return (

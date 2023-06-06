@@ -2,7 +2,7 @@ import TodoInput from './TodosInput.jsx';
 import FloatingButton from './atoms/FloatingButton.jsx';
 
 
-function AddTodos(setTodoStateHandler) {
+function AddTodos() {
   return (
     <div id="addTodos">
       <div id="formTogglerWrapper">
@@ -10,7 +10,7 @@ function AddTodos(setTodoStateHandler) {
         </div>
 
         <div id="todosForm">
-          <TodoInput setTodoStateHandler={setTodoStateHandler} />
+          <TodoInput />
         </div>
     </div>
   )

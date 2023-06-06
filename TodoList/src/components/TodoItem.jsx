@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useTodosContextUpdate } from './TodosProvider';
 import Checkbox from './atoms/Checkbox';
 
-function TodoItem({todoItem, removeTodoHandler}) {
+function TodoItem({ todoItem }) {
   TodoItem.propTypes = {
     todoItem: PropTypes.object,
     body: PropTypes.string,
@@ -12,9 +13,10 @@ function TodoItem({todoItem, removeTodoHandler}) {
   };
 
   const [finished, setFinished] = useState(todoItem.finished)
+  const todosUpdate = useTodosContextUpdate()
 
   function remove() {
-    removeTodoHandler(todoItem)
+    todosUpdate.remove(todoItem)
   }
 
   function setFinishedHandler() {

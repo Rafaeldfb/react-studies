@@ -36,12 +36,17 @@
     }
   }
 }
-
-#todosForm {
-  margin: 1rem;
+#addTodos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   position: sticky;
   top: 3.5rem;
   z-index: 2;
+}
+#todosForm {
+  margin: 1rem;
+  flex-grow: 1;
 
   & #todosFomrWrapper {
     display: flex;

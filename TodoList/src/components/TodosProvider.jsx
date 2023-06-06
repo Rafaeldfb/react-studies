@@ -21,18 +21,18 @@ function TodosProvider({ children }) {
       setTodos(todo.body, todo.priority);
       setTodosState(getTodos())
     },
-    remove:function removeTodosHandler(todo) {
+    remove: function removeTodosHandler(todo) {
       removeSingleTodo(todo);
       setTodosState(getTodos())
     },
   }
 
   return (
-    < TodosContext.Provider value={todos} >
-      < TodosUpdateContext value={updateTodos}>
+    <TodosContext.Provider value={todos}>
+      <TodosUpdateContext.Provider value={updateTodos}>
         {children}
-      </TodosUpdateContext>
-    </ TodosContext.Provider>
+      </TodosUpdateContext.Provider>
+    </TodosContext.Provider>
   )
 }
 
