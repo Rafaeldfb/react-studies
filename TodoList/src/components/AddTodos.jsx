@@ -6,12 +6,12 @@ function AddTodos() {
   return (
     <div id="addTodos">
       <div id="formTogglerWrapper">
-          <FloatingButton />
-        </div>
+        <FloatingButton />
+      </div>
 
-        <div id="todosForm">
-          <TodoInput />
-        </div>
+      <div id="todosForm">
+        <TodoInput />
+      </div>
     </div>
   )
 }
