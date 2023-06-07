@@ -7,10 +7,50 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
     <title>TODO list - Vite + React</title>
+
+    <style>
+      :root {
+        --color__primary_light: hsl(214, 100%, 82%);
+        --color__primary: hsl(214, 100%, 50%);
+        --bg__color: hsl(0, 0%, 14%);
+        --bg__color_light: hsl(0, 0%, 24%);
+
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+
+        color-scheme: light dark;
+        color: rgba(255, 255, 255, 0.87);
+        background-color: var(--bg__color);
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      #loader {
+        display: block;
+        width:100vw; 
+        height:100vh;
+      }
+      #root:not(:empty) + #loader {
+        display: none;
+      }
+    </style>
   </head>
 
   <body>
     <div id="root"></div>
+
+    <div id="loader">
+      <!-- page loader -->
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
