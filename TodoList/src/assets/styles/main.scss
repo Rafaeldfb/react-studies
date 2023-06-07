@@ -109,6 +109,7 @@ div.todoListItem {
     word-break: break-all;
     flex-grow: 1;
     flex-shrink: 0;
+    width: 50%;
     margin: 1rem;
   }
   & > span, & > button {
