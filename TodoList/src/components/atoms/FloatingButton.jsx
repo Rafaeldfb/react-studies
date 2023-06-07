@@ -7,8 +7,12 @@ function FloatingButton() {
 
   return (
     <div className={classes.floatingButton}>
-      <button className={activeForm ? 'active' : ''} onClick={activeFormUpdate}>
-        {activeForm ? 'X' : '+'}
+      <button 
+        className={activeForm ? 'active' : ''} 
+        onClick={activeFormUpdate} 
+        title={activeForm ? 'Close' : 'Add a new To Do Activity'}
+      >
+        {activeForm ? 'x' : '+'}
       </button>
     </div>
   )

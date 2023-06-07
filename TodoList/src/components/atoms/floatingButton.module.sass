@@ -1,19 +1,27 @@
+$--color__border_light: hsl(214, 100%, 82%)
+$--color__border: hsl(214, 100%, 70%)
+  
 .floatingButton button 
-    width: 3rem
-    aspect-ratio: 1 / 1
-    // padding: 1rem
-    font-size: 2rem
-    border-radius: 50%
-    // margin-left: -4rem 
+  width: 3rem
+  aspect-ratio: 1 / 1
+  font-size: 2rem
+  color: $--color__border_light
+  padding-bottom: 0.3em
+  border-top-color: $--color__border_light
+  border-bottom-color: $--color__border
+  border-left-color: $--color__border_light
+  border-right-color: $--color__border
+  border-radius: 50%
+  background: unset
+  backdrop-filter: blur(3px) !important
+  transition: all 300ms ease-in-out
 
-    &.active 
-      font-size: 3rem
+  &:hover
+    border-bottom-color: $--color__border_light
+    border-top-color: $--color__border
+    border-left-color: $--color__border
+    border-right-color: $--color__border_light
+    filter: brightness(1.5) drop-shadow(0 0 3px $--color__border_light)
 
-
-// display: flex
-// position: -webkit-sticky
-// position: sticky
-// top: 5rem
-// left: 2rem
-
-// &
+  &.active 
+    // font-size: 2rem
