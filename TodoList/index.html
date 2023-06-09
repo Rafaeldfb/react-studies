@@ -39,6 +39,7 @@
         height:100vh;
         position: sticky;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
@@ -55,15 +56,36 @@
         border-radius: 50%;
         border-color: var(--color__primary_light);
         border-top-color: var(--color__primary);
-        animation: loaderSpinner 750ms ease-in-out infinite;
+        animation: loaderSpinner 1500ms ease infinite;
+      }
+
+      #loader #loaderLabel {
+        color: var(--color__primary_light);
+        font-size: xx-large;
+        font-weight: 800;
+        transform: translateY(-4rem);
+        animation: loaderLabel 1500ms ease infinite;
       }
 
       @keyframes loaderSpinner {
         0% {
           transform: rotate(0deg);
+          box-shadow: 0 0 20px var(--color__primary_light) inset, 0 0 20px var(--color__primary_light);
         }
         100% {
           transform: rotate(360deg);
+          box-shadow: 0 0 5px var(--color__primary) inset, 0 0 5px var(--color__primary);
+        }
+      }
+      @keyframes loaderLabel {
+        0% {
+          color: var(--bg__color);
+        }
+        40%, 60% {
+          color: var(--color__primary_light);
+        }
+        100% {
+          color: var(--bg__color);
         }
       }
     </style>
@@ -74,6 +96,7 @@
 
     <div id="loader">
       <!-- page loader -->
+      <div id="loaderLabel">Loading</div>
       <div class="pageLoadProgress"><!-- progress or loader element --></div>
     </div>
     <script type="module" src="/src/main.jsx"></script>
