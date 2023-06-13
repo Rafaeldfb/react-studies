@@ -47,6 +47,14 @@
           margin: auto;
           padding: 0.5em 2em;
           min-width: 25%;
+          border-radius: 1rem;
+          &[disabled] {
+            border-color: var(--bg__color_light);
+            &:hover {
+              box-shadow: none;
+              background-color: var(--bg__color);
+            }
+          }
         }
       }
 
