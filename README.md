@@ -2,7 +2,7 @@
 
 Hello, welcome to another simple Todo list app!!!
 This this a ReactJs study, made just to study and exercise some basic stuffs from React, like: 
-- functional react components, hooks, shared State, prop drilling, Atomic design pattern, integrations and so on...
+- functional react components, hooks, shared State, prop drilling, Context, Atomic design pattern, integrations and so on...
 
 
 # Stack and dependencies 
@@ -24,7 +24,7 @@ $ npm run dev
 ## Runnig the app
 After runnig the dev server using vite, you can open the local ip at your browser to get access to the app.
 
-## Structure and feateures
+## Structure and features
 The app itself is too simple, no fancy stuff. It consist of just a simple translucid card where you can register a new
 To do activity, set the priority and add it to the to do's list.
 The to do's list is behind that form card, where you can see all registered activities and do some actions as:
@@ -41,6 +41,10 @@ from 320px screens and beyond that.
 But not only layout's metter, some cool events will happen just on mouse events in actual version like hover event, So
 to get a better experence try to running this at your desktop or notebook too.
 
+## Cross browser compatiblity
+This app as primary made with help of Firefox, but some corrections were made for Chrome. Both running versions released after 2021 will be fine, so is espected that it work on these browsers without any issues.
+If you'r using another browser or older version, please contact me to give your feedback. 
 
-# For Help, Suggestions and  to send for me some Money or Cripto...
+
+# For Help, Suggestions and to send me some Money or Cripto...
 Please, contact me at - dfbrafa@hotmail.com
