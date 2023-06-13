@@ -1,3 +1,9 @@
+@use "../../assets/styles/variables" as variables;
+
+$--color__primary_light: variables.$color__primary_light;
+$--color__primary: variables.$color__primary;
+$--bg__color: variables.$bg__color;
+
 .checkboxWrapper {
   & label {
     display: flex;
@@ -25,13 +31,13 @@
       height: 1.6em;
       border-radius: 0.15em;
       margin-right: 0.5em;
-      border: 0.15em solid var(--color__primary_light);
+      border: 0.15em solid $--color__primary_light;
       outline: none;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
       &.checked {
-        background-color: var(--color__primary);
+        background-color: $--color__primary;
         position: relative;
       }
   
@@ -45,9 +51,9 @@
       }
 
       &:hover {
-        box-shadow: 0 0 5px var(--color__primary_light);
+        box-shadow: 0 0 5px $--color__primary_light;
         &:not(.checked) {
-          background-color: var(--bg__color);
+          background-color: $--bg__color;
           filter: brightness(170%);
         }
         &.checked {

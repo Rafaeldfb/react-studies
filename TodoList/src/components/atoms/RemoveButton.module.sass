@@ -1,0 +1,15 @@
+@use "../../assets/styles/variables" as variables
+
+button 
+  padding: 0.2rem 0.4rem
+  display: inline-flex
+  align-content: center
+  justify-content: center
+  background-color: variables.$bg__color
+  border: solid 1px variables.$color__primary_light
+  border-radius: 10%
+  transition: all 250ms ease-out
+
+button:hover
+  box-shadow: 0 0 5px variables.$color__primary_light
+  background-color: variables.$bg__color_light
